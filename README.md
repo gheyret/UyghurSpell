@@ -5,7 +5,7 @@ Spellcheck module used in UyghurEditPP
 
 			UyghurSpell imla = new UyghurSpell();
 			String path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"uyghur_imla.txt");
-			imla.LoadDictionary("uyghur_imla.txt",Uyghur.YEZIQ.ULY);
+			imla.LoadDictionary(path,Uyghur.YEZIQ.ULY);
 			System.Diagnostics.Debug.WriteLine("Imla ambiridiki soz sani :" + imla.WordCount);
 						
 			string soz = "Uyghur";
