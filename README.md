@@ -1,5 +1,6 @@
 # UyghurSpell
 Spellcheck module used in UyghurEditPP
+This program based [https://www.codeproject.com/Articles/4179/Spell-Checker-Dictionary-Engine][https://www.codeproject.com/Articles/4179/Spell-Checker-Dictionary-Engine]
 
 # Samples
 
