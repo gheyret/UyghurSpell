@@ -3,7 +3,8 @@ Spellcheck module used in UyghurEditPP
 
 This program based [Spell Checker Dictionary Engine](https://www.codeproject.com/Articles/4179/Spell-Checker-Dictionary-Engine)
 
-# Samples
+# Ishlitish usuli:
+
 		System.Diagnostics.Debug.WriteLine("Uyghurche Imla Tekshrush Programisi we uni Ishlitish!");
 		System.Diagnostics.Debug.WriteLine("Ekanda korushke qolay bolushi uchun Latinche halette sinaymiz");
 		UyghurSpell imla = new UyghurSpell();
@@ -15,9 +16,11 @@ This program based [Spell Checker Dictionary Engine](https://www.codeproject.com
 		string barmu = imla.IsListed(soz)?"Bar":"Yoq";
 		System.Diagnostics.Debug.WriteLine(soz + " Imla ambirida " + barmu);
 		System.Diagnostics.Debug.WriteLine("======================================");
-
+		
 		//Barliq Uygh din bashlanghan sozlerni izdep tapidu
-		List<string>  namzatlar = imla.GetSuggestions("Uygh*");
+		soz = "aqs*";
+		List<string>  namzatlar = imla.GetSuggestions(soz);
+		System.Diagnostics.Debug.WriteLine("Izdeydighan qelip: " + soz);
 		foreach(string nam in namzatlar){
 			System.Diagnostics.Debug.WriteLine(nam);
 		}
@@ -28,7 +31,7 @@ This program based [Spell Checker Dictionary Engine](https://www.codeproject.com
 		foreach(string nam in namzatlar){
 			System.Diagnostics.Debug.WriteLine(nam);
 		}
-
+		
 		System.Diagnostics.Debug.WriteLine("======================================");
 		soz = "a????mu"; // a bilen bashlanghan, axiri mu bilen axirlashqan 7 herplik sozni izdep tapidu
 		System.Diagnostics.Debug.WriteLine("Izdeydighan qelip: " + soz);
@@ -36,168 +39,119 @@ This program based [Spell Checker Dictionary Engine](https://www.codeproject.com
 		foreach(string nam in namzatlar){
 			System.Diagnostics.Debug.WriteLine(nam);
 		}
-
+		
 		System.Diagnostics.Debug.WriteLine("======================================");
 		soz = "bugun";
 		namzatlar = imla.Lookup(soz); // bu yerde bugun degenni xata dep qarap, her xil ehtimaliqlarni kozde tutqan halda namzat sozlerni izdeydu
-
+		
 		System.Diagnostics.Debug.WriteLine(soz + " ning namzatlirining sani : " + namzatlar.Count);
 		foreach(string nam in namzatlar){
 			System.Diagnostics.Debug.WriteLine(nam);
 		}
-
+		
 		System.Diagnostics.Debug.WriteLine("======================================");
 		soz = "keldiya";
 		namzatlar = imla.Lookup(soz); // Xata sozning barliq namzatlirini izdep tapidu
-
+		
 		System.Diagnostics.Debug.WriteLine(soz + " ning namzatlirining sani : " + namzatlar.Count);
 		foreach(string nam in namzatlar){
 			System.Diagnostics.Debug.WriteLine(nam);
 		}
 
-
-# Ijra netijisi
-
+# Netije:
 		Uyghurche Imla Tekshrush Programisi we uni Ishlitish!
 		Ekanda korushke qolay bolushi uchun Latinche halette sinaymiz
 		Imla ambiridiki soz sani :145768
 		Uyghur Imla ambirida Bar
 		======================================
-		Izdeydighan Qelip: Uygh*
-		uyghurchilashturghuchi
-		uyghurchilashturghan
-		uyghurchilashturghili
-		uyghurchilashturdi
-		uyghurchilashturmaqchi
-		uyghurchilashturmaq
-		uyghurchilashturup
-		uyghurchilashturush
-		uyghurchilashturushni
-		uyghurchilashturushqa
-		uyghurchilashturushta
-		uyghurchilashturushtin
-		uyghurchilashturulghan
-		uyghurchilashturuldi
-		uyghurchilashturulup
-		uyghurchilashturulush
-		uyghurchilashturulmaq
-		uyghurchilashti
-		uyghurchilashqan
-		uyghurchilashmaq
-		uyghurchilishish
-		uyghurchimu
-		uyghurchini
-		uyghurchinimu
-		uyghurchining
-		uyghurchigha
-		uyghurchida
-		uyghurchidimu
-		uyghurchidin
-		uyghurchidiki
-		uyghurchisi
-		uyghurchisimu
-		uyghurchisini
-		uyghurchisinimu
-		uyghurchisining
-		uyghurche
-		uyghursoft
-		uyghursoftning
-		uyghurshunas
-		uyghurshunasliq
-		uyghurshunasliqning
-		uyghurshunaslar
-		uyghursiz
-		uyghurluq
-		uyghurluqni
-		uyghurluqtin
-		uyghurluqini
-		uyghurla
-		uyghurlar
-		uyghurlarmu
-		uyghurlarla
-		uyghurlarchu
-		uyghurlarning
-		uyghurlarningmu
-		uyghurlarningla
-		uyghurlarningkige
-		uyghurlarni
-		uyghurlarnimu
-		uyghurlarnila
-		uyghurlargha
-		uyghurlarghimu
-		uyghurlarghila
-		uyghurlarda
-		uyghurlardimu
-		uyghurlardin
-		uyghurlardinmu
-		uyghurlardiki
-		uyghurlardek
-		uyghurlardur
-		uyghurliri
-		uyghurlirimu
-		uyghurlirim
-		uyghurlirimiz
-		uyghurlirimizmu
-		uyghurlirimizni
-		uyghurlirimizning
-		uyghurlirimizdin
-		uyghurlirimizgha
-		uyghurlirini
-		uyghurlirining
-		uyghurliridin
-		uyghurliridiki
-		uyghurlirida
-		uyghurlirigha
-		uyghur’édit
-		uyghur’éditning
-		uyghuristan
-		uyghuristanning
-		uyghuristan’gha
-		uyghuristanda
-		uyghuristanliq
-		uyghurimiz
-		uyghurimizning
-		uyghuri
-		uyghurining
-		uyghur
-		uyghurmu
-		uyghurmidu
-		uyghurmiz
-		uyghurmen
-		uyghurken
-		uyghurni
-		uyghurning
-		uyghurningmu
-		uyghurghu
-		uyghurgha
-		uyghurda
-		uyghurdin
-		uyghurdiki
-		uyghurdur
-		uyghurdek
-		uyghurum
-		uyghurumni
-		uyghurumning
-		uyghurumdin
-		uyghurumgha
-		uyghun
-		uyghunlashturup
-		uyghunlashturush
-		uyghunlashturushni
-		uyghunlashturushqa
-		uyghunlashturulghan
-		uyghunlashturulmaq
-		uyghunlashturulush
-		uyghunlashturmaq
-		uyghunlashti
-		uyghunlashqan
-		uyghunlashmaq
-		uyghunliship
-		uyghunlishish
-		uyghunlishishqa
-		uyghunlishishi
-		uyghunluq
-		uyghunmu
+		Izdeydighan qelip: aqs*
+		aqsa
+		aqsaray
+		aqsarayni
+		aqsarayning
+		aqsaraygha
+		aqsarayda
+		aqsaraydin
+		aqsaraydiki
+		aqsarayliq
+		aqsaq
+		aqsaqal
+		aqsaqalliq
+		aqsaqalliri
+		aqsaqallirini
+		aqsaqallirining
+		aqsaqalliridin
+		aqsaqallirigha
+		aqsaqallar
+		aqsaqallarning
+		aqsaqalni
+		aqsaqalning
+		aqsaqalgha
+		aqsaqmaral
+		aqsaqmaralliq
+		aqsaqili
+		aqsaqilini
+		aqsaqilining
+		aqsaq-cholaq
+		aqsaqlash
+		aqsaqliq
+		aqsaqlimaq
+		aqsaliq
+		aqsay
+		aqsap
+		aqsam
+		aqsatmaq
+		aqsash
+		aqsashmaq
+		aqsitip
+		aqsitish
+		aqsitilmaq
+		aqsitilish
+		aqsil
+		aqsilliq
+		aqsillar
+		aqsillarning
+		aqsillarni
+		aqsilni
+		aqsilning
+		aqsilgha
+		aqsildin
+		aqsili
+		aqsilini
+		aqsilining
+		aqsimu
+		aqsimaq
+		aqsirash
+		aqsirimaq
+		aqsishish
+		aqsöngek
+		aqsöngekler
+		aqsöngeklerning
+		aqsöngeklerge
+		aqsöngekliri
+		aqsöngeklirining
+		aqsöngeklirige
+		aqsun
+		aqsuni
+		aqsuning
+		aqsu
+		aqsuluq
+		aqsuluqlar
+		aqsuluqlarning
+		aqsularda
+		aqsugha
+		aqsughiche
+		aqsuda
+		aqsudimu
+		aqsudin
+		aqsudiki
+		aqshebnem
+		aqshil
+		aqshimar
+		aqshopa
+		aqshopaliq
+		aqsopi
+		aqsopiliq
 		======================================
 		Izdeydighan qelip: z?w??
 		zawal
