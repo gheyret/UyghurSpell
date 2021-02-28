@@ -20,7 +20,7 @@ namespace UyghurSpell
 			System.Diagnostics.Debug.WriteLine("Ekanda korushke qolay bolushi uchun Latinche halette sinaymiz");
 			UyghurSpell imla = new UyghurSpell();
 			String path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"uyghur_imla.txt");
-			imla.LoadDictionary(path,Uyghur.YEZIQ.ULY);
+			imla.LoadDictionary("uyghur_imla.txt",Uyghur.YEZIQ.ULY);
 			System.Diagnostics.Debug.WriteLine("Imla ambiridiki soz sani :" + imla.WordCount);
 						
 			string soz = "Uyghur";
@@ -28,13 +28,15 @@ namespace UyghurSpell
 			System.Diagnostics.Debug.WriteLine(soz + " Imla ambirida " + barmu);
 			System.Diagnostics.Debug.WriteLine("======================================");
 
-			//Barliq Uygh din bashlanghan sozlerni tepip chiqish
-			List<string>  namzatlar = imla.GetSuggestions("Uygh*");
+			//Barliq Uygh din bashlanghan sozlerni izdep tapidu
+			soz = "aqs*";
+			List<string>  namzatlar = imla.GetSuggestions(soz);
+			System.Diagnostics.Debug.WriteLine("Izdeydighan qelip: " + soz);
 			foreach(string nam in namzatlar){
 				System.Diagnostics.Debug.WriteLine(nam);
 			}
 			System.Diagnostics.Debug.WriteLine("======================================");
-			soz = "z?w??";
+			soz = "z?w??"; //birinchi herp z, 3-herp w bolghan 5 herplik sozni izdep tapidu
 			System.Diagnostics.Debug.WriteLine("Izdeydighan qelip: " + soz);
 			namzatlar = imla.GetSuggestions(soz);
 			foreach(string nam in namzatlar){
@@ -42,7 +44,7 @@ namespace UyghurSpell
 			}
 
 			System.Diagnostics.Debug.WriteLine("======================================");
-			soz = "a????mu";
+			soz = "a????mu"; // a bilen bashlanghan, axiri mu bilen axirlashqan 7 herplik sozni izdep tapidu
 			System.Diagnostics.Debug.WriteLine("Izdeydighan qelip: " + soz);
 			namzatlar = imla.GetSuggestions(soz);
 			foreach(string nam in namzatlar){
@@ -51,7 +53,7 @@ namespace UyghurSpell
 
 			System.Diagnostics.Debug.WriteLine("======================================");
 			soz = "bugun";
-			namzatlar = imla.Lookup(soz); // Xata sozning barliq namzatlirini izdep tapidu
+			namzatlar = imla.Lookup(soz); // bu yerde bugun degenni xata dep qarap, her xil ehtimaliqlarni kozde tutqan halda namzat sozlerni izdeydu
 
 			System.Diagnostics.Debug.WriteLine(soz + " ning namzatlirining sani : " + namzatlar.Count);
 			foreach(string nam in namzatlar){
