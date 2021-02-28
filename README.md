@@ -63,6 +63,7 @@ This program based [Spell Checker Dictionary Engine](https://www.codeproject.com
 		Imla ambiridiki soz sani :145768
 		Uyghur Imla ambirida Bar
 		======================================
+		Izdeydighan Qelip: Uygh*
 		uyghurchilashturghuchi
 		uyghurchilashturghan
 		uyghurchilashturghili
