@@ -28,16 +28,16 @@ namespace UyghurSpell
 			System.Diagnostics.Debug.WriteLine(soz + " Imla ambirida " + barmu);
 			System.Diagnostics.Debug.WriteLine("======================================");
 
-			//Barliq Uygh din bashlanghan sozlerni izdep tapidu
+			//Barliq aqs din bashlanghan sozlerni izdep tapidu
 			soz = "aqs*";
 			List<string>  namzatlar = imla.GetSuggestions(soz);
-			System.Diagnostics.Debug.WriteLine("Izdeydighan qelip: " + soz);
+			System.Diagnostics.Debug.WriteLine("bariq aqs bilen bashlanghan soz: " + soz);
 			foreach(string nam in namzatlar){
 				System.Diagnostics.Debug.WriteLine(nam);
 			}
 			System.Diagnostics.Debug.WriteLine("======================================");
 			soz = "z?w??"; //birinchi herp z, 3-herp w bolghan 5 herplik sozni izdep tapidu
-			System.Diagnostics.Debug.WriteLine("Izdeydighan qelip: " + soz);
+			System.Diagnostics.Debug.WriteLine("Birinchi herpi z, 3-herpi w bolghan 5 herplik soz: " + soz);
 			namzatlar = imla.GetSuggestions(soz);
 			foreach(string nam in namzatlar){
 				System.Diagnostics.Debug.WriteLine(nam);
@@ -45,7 +45,16 @@ namespace UyghurSpell
 
 			System.Diagnostics.Debug.WriteLine("======================================");
 			soz = "a????mu"; // a bilen bashlanghan, axiri mu bilen axirlashqan 7 herplik sozni izdep tapidu
-			System.Diagnostics.Debug.WriteLine("Izdeydighan qelip: " + soz);
+			System.Diagnostics.Debug.WriteLine("a bilen bashlanghan, axiri mu bilen axirlashqan 7 herplik soz: " + soz);
+			namzatlar = imla.GetSuggestions(soz);
+			foreach(string nam in namzatlar){
+				System.Diagnostics.Debug.WriteLine(nam);
+			}
+
+
+			System.Diagnostics.Debug.WriteLine("======================================");
+			soz = "d??e*"; // a bilen bashlanghan, axiri mu bilen axirlashqan 7 herplik sozni izdep tapidu
+			System.Diagnostics.Debug.WriteLine("birnchi heripi d, 4-heripi e bolghan barliq sozler: " + soz);
 			namzatlar = imla.GetSuggestions(soz);
 			foreach(string nam in namzatlar){
 				System.Diagnostics.Debug.WriteLine(nam);
