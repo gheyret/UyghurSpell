@@ -3,7 +3,7 @@ Spellcheck module used in UyghurEditPP
 
 This program based [Spell Checker Dictionary Engine](https://www.codeproject.com/Articles/4179/Spell-Checker-Dictionary-Engine)
 
-# Diqqet:
+## Diqqet:
    Sözlükni özingiz teyyar qilip ishliting. yeni "uyghur_imla.txt" ni özingiz teyyar qiling.
 
 # Ishlitish usuli:
