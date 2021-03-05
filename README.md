@@ -3,6 +3,9 @@ Spellcheck module used in UyghurEditPP
 
 This program based [Spell Checker Dictionary Engine](https://www.codeproject.com/Articles/4179/Spell-Checker-Dictionary-Engine)
 
+# Diqqet:
+   Sözlükni özingiz teyyar qilip ishliting. yeni "uyghur_imla.txt" ni özingiz teyyar qiling.
+
 # Ishlitish usuli:
 
 		System.Diagnostics.Debug.WriteLine("Uyghurche Imla Tekshrush Programisi we uni Ishlitish!");
